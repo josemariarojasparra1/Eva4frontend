@@ -21,7 +21,7 @@ export default function PerroTabla({ perros, onEditar, onEliminar }) {
 
   return (
     <div className="table-responsive tabla-perros-wrap">
-      <table className="table align-middle tabla-perros">
+      <table className="table table-primary table-striped table-hover align-middle tabla-perros">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -37,38 +37,22 @@ export default function PerroTabla({ perros, onEditar, onEliminar }) {
         <tbody>
           {perros.map((perro) => (
             <tr key={perro.id}>
-              <td className="celda-nombre">
-                {perro.nombre}
-              </td>
+              <td className="celda-nombre">{perro.nombre}</td>
+
+              <td>{perro.raza}</td>
+
+              <td>{perro.edad} años</td>
+
+              <td>{perro.peso} kg</td>
 
               <td>
-                {perro.raza}
-              </td>
-
-              <td>
-                {perro.edad} años
-              </td>
-
-              <td>
-                {perro.peso} kg
-              </td>
-
-              <td>
-                <span
-                  className={`badge chip-estado ${
-                    CLASE_SALUD[perro.salud] ?? ""
-                  }`}
-                >
+                <span className={"badge " + (CLASE_SALUD[perro.salud] || "")}>
                   {perro.salud}
                 </span>
               </td>
 
               <td>
-                <span
-                  className={`badge chip-estado ${
-                    CLASE_ADOPCION[perro.adopcion] ?? ""
-                  }`}
-                >
+                <span className={"badge " + (CLASE_ADOPCION[perro.adopcion] || "")}>
                   {perro.adopcion}
                 </span>
               </td>
