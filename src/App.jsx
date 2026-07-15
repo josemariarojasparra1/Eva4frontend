@@ -134,8 +134,8 @@ export default function App() {
         <section className="mt-4">
           <div className="d-flex justify-content-between align-items-baseline flex-wrap gap-2 mb-3">
             <h2 className="h5 seccion-titulo">
-              Perros registrados
-              <span className="contador-piezas">
+              Perros registrados:{" "}
+              <span className="contador-perros">
                 {perrosFiltrados.length}
               </span>
             </h2>

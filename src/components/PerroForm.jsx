@@ -83,7 +83,7 @@ export default function PerroForm({
     `form-select${enviado && errores[campo] ? " is-invalid" : ""}`;
 
   return (
-    <form className="pieza-form card" onSubmit={manejarEnvio} noValidate>
+    <form className="perro-form card" onSubmit={manejarEnvio} noValidate>
       <div className="card-body">
 
         <h2 className="h5 form-titulo">
